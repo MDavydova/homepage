@@ -2,9 +2,290 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Résumé</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@300;500&family=Port+Lligat+Slab&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    ― Hello World! &#x1F609;
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper flex flex-column">
+          <div class="header__info flex justify-between align-center">
+            <div class="header__logo">
+              <img src="./assets/logo.svg" alt="logo" />
+            </div>
+          </div>
+          <div class="header__nav">
+            <div class="header__nav-wrapper">
+              <div class="header__nav-headline-box">
+                <h1 class="header__nav-headline">Resume</h1>
+              </div>
+              <nav>
+                <ul class="flex t-flex-col justify-center align-center">
+                  <li>
+                    <a href="#intro-section">Intro</a>
+                  </li>
+                  <li>
+                    <a href="#add-info-section">Skills</a>
+                  </li>
+                  <li>
+                    <a href="#timeline-section">Timeline</a>
+                  </li>
+                  <li>
+                    <a href="#contact-section">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="separator separator--light flex flex-column">
+        <div class="separator__box"></div>
+        <div class="separator__img">
+          <img src="./assets/pendant-lamp-light.png" alt="image of lamp" />
+          <h2>Intro</h2>
+        </div>
+      </div>
+      <section id="intro-section" class="intro">
+        <div class="container">
+          <div class="intro__composition">
+            <p class="intro__caption intro__caption--desk">
+              Who am I?<br />
+              Your reliable frontally. <br />
+              In the deepest webwaters <br />
+              I’m ready to dive, <br />Aimed to bring the best <br />UX and UI.
+            </p>
+            <div
+              class="intro__composition-image intro__composition-image--jellyfish"
+            >
+              <img
+                src="./assets/jellyfish-dark-capture.png"
+                alt="jellyfish image"
+              />
+            </div>
+            <div class="intro__composition-block relative">
+              <div class="intro__composition-block-box">
+                <p class="intro__caption intro__caption--mob">
+                  Who am I?<br />
+                  Your reliable frontally. <br />
+                  In the deepest webwaters <br />
+                  I’m ready to dive, <br />Aimed to bring the best <br />UX and
+                  UI.
+                </p>
+              </div>
+              <div class="flex justify-between">
+                <div
+                  class="intro__composition-image intro__composition-image--chair"
+                >
+                  <img src="./assets/chair.png" alt="chair image" />
+                </div>
+                <div
+                  class="intro__composition-image intro__composition-image--chair"
+                >
+                  <img src="./assets/chair.png" alt="chair image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="separator separator--dark flex flex-column">
+        <div class="separator__box"></div>
+        <div class="separator__img">
+          <img src="./assets/pendant-lamp-dark.png" alt="image of lamp" />
+          <h2>Skillset</h2>
+        </div>
+      </div>
+
+      <section id="add-info-section" class="additional-info">
+        <div class="container">
+          <div class="skills flex flex-column align-center">
+            <div class="skills__box-item skills__box-item--mob">
+              <div class="skills__img">
+                <h3>
+                  <img src="./assets/skills.svg" alt="image" />
+                </h3>
+              </div>
+            </div>
+            <div class="skills__box">
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--creative">
+                  <img src="./assets/creative-bottle.svg" alt="bottle image" />
+                </div>
+              </div>
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--express">
+                  <img src="./assets/express-bottle.svg" alt="bottle image" />
+                  <div class="skills__img-decor"></div>
+                </div>
+              </div>
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--know">
+                  <img src="./assets/wisdom-bottle.svg" alt="bottle image" />
+                </div>
+              </div>
+            </div>
+            <div class="skills__box">
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--js">
+                  <img src="./assets/js-bottle.svg" alt="bottle image" />
+                  <div class="skills__img-decor"></div>
+                </div>
+              </div>
+              <div class="skills__box-item skills__box-item--desk">
+                <div class="skills__img">
+                  <h3>
+                    <img src="./assets/skills.svg" alt="image" />
+                  </h3>
+                </div>
+              </div>
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--html">
+                  <img src="./assets/html-bottle.svg" alt="bottle image" />
+                  <div class="skills__img-decor"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skills__box">
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--responsible">
+                  <img
+                    src="./assets/responsible-bottle.svg"
+                    alt="bottle image"
+                  />
+                </div>
+              </div>
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--react">
+                  <img src="./assets/react-bottle.png" alt="bottle image" />
+                  <div class="skills__img-decor"></div>
+                </div>
+              </div>
+              <div class="skills__box-item">
+                <div class="skills__img skills__img--flex">
+                  <img src="./assets/flash-bottle.svg" alt="bottle image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="separator separator--flame flex align-center">
+        <div class="separator__box"></div>
+        <div class="separator__img">
+          <img src="./assets/flame.svg" alt="flame image" />
+          <h2>TIMELINE</h2>
+        </div>
+      </div>
+
+      <section id="timeline-section" class="timeline">
+        <div class="timeline__item">
+          <div class="container">
+            <div class="timeline__item-wrapper">
+              <h3>Education</h3>
+              <p>
+                <strong>Where:</strong> National Technical University – «Kharkiv
+                Polytechnic Institute»
+              </p>
+              <p><strong>What:</strong> Bachelor's, Software Engineering</p>
+              <p><strong>When:</strong> 2016-2020</p>
+              <p><strong>How:</strong> GPA - 4.6 - A</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="container">
+            <div class="timeline__item-wrapper">
+              <h3>Work</h3>
+              <strong>Frontend Developer at Yelk</strong>
+              <p><strong>How long:</strong> 2021 - 2023</p>
+              <p>
+                <strong>What:</strong> creating responsive, accessible, pixel-
+                perfect layouts and adding interactivity with JavaScript
+                including DOM manipulation and handling API requests.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="container">
+            <div class="timeline__item-wrapper">
+              <h3>Professional Vision</h3>
+              <p>
+                I'd like to level up and move from {HTML+CSS+JS} techstack to
+                'serious' web development. By 'serious' I mean complex projects
+                where React, Redux, Typescript, Node.js, Next.js and many more
+                tools similar to these are required. I'm thirsty for knowledge
+                and ready to go all in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="separator separator--dark flex flex-column">
+        <div class="separator__box"></div>
+        <div class="separator__img">
+          <img src="./assets/pendant-lamp-dark.png" alt="image of lamp" />
+          <h2>Contact</h2>
+        </div>
+      </div>
+
+      <section id="contact-section" class="contact">
+        <div class="container">
+          <div class="flex flex-column">
+            <p>
+              This is my personal assistant - parrot Joe. Please contact me
+              through Joe or use the contact icons below
+            </p>
+            <div class="contact__image contact__image--parrot">
+              <img src="./assets/parrot.svg" alt="parrot image" />
+            </div>
+            <div class="contact__socials flex flex-column align-center">
+              <p id="contactDisplay" class="contact__socials-display"></p>
+              <input id="contactDisplayInput" type="hidden" />
+              <div>
+                <button
+                  data-value="davidofrontend@gmail.com"
+                  class="contact__socials-item"
+                >
+                  <img src="./assets/gmail.svg" alt="gmail icon" />
+                </button>
+                <a
+                  class="contact__socials-item"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/milena-davydova/"
+                  ><img src="./assets/linkedin.svg" alt="linkedin icon"
+                /></a>
+                <button class="contact__socials-item" data-value="@MDavidon">
+                  <img src="./assets/telegram.svg" alt="telegram icon" />
+                </button>
+                <button
+                  class="contact__socials-item"
+                  data-value="+380958683738"
+                >
+                  <img src="./assets/phone.svg" alt="phone icon" />
+                </button>
+              </div>
+            </div>
+            <div class="contact__image contact__image--chair">
+              <img src="./assets/chair.png" alt="chair image" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
   </body>
 </html>

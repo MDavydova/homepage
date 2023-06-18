@@ -1,0 +1,116 @@
+.header {
+  &__wrapper {
+    gap: 64px;
+
+    @include media("tablet") {
+      gap: 32px;
+    }
+  }
+
+  &__logo {
+    max-width: 300px;
+
+    img {
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  h1 {
+    font-family: "Port Lligat Slab", serif;
+
+    @include media("tablet") {
+      font-size: 32px;
+    }
+
+    @include media("large-phone") {
+      display: none;
+    }
+  }
+
+  &__nav {
+    background-color: $primary-dark;
+    padding: 30px 50px;
+    border-radius: 16px;
+    z-index: 1000;
+
+    @include media("tablet") {
+      margin: 0 -24px;
+      position: relative;
+    }
+
+    &-wrapper {
+      border-radius: 34px;
+      padding: 32px;
+      background-color: $beige;
+    }
+
+    nav {
+      ul {
+        gap: 32px;
+
+        a,
+        a:visited {
+          border-bottom: 1px solid transparent;
+          color: #000000;
+          font-weight: 300;
+          font-size: 32px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            border-color: currentColor;
+          }
+
+          @include media("tablet") {
+            font-size: 24px;
+          }
+        }
+
+        @include media("tablet") {
+          gap: 16px;
+        }
+      }
+    }
+
+    &-headline {
+      font-weight: 500;
+      letter-spacing: 0.29em;
+      font-size: 40px;
+      text-align: center;
+      display: block;
+
+      @include media("tablet") {
+        font-size: 32px;
+      }
+
+      &::after {
+        position: absolute;
+        content: url("/assets/right-wing.svg");
+        right: 0;
+      }
+
+      &::before {
+        position: absolute;
+        content: url("/assets/left-wing.svg");
+        left: 0;
+
+        @include media("tablet") {
+          display: none;
+        }
+      }
+
+      &-box {
+        max-width: 500px;
+        margin: 0 auto 32px;
+        position: relative;
+
+        @include media("tablet") {
+          margin: 0 auto 34px;
+          display: none;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
