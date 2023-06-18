@@ -1,5 +1,9 @@
 .separator {
   margin: 50px 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
   &__img {
     position: relative;
     width: fit-content;

@@ -5,6 +5,10 @@
     position: relative;
     font-size: 20px;
     transition: all 0.3s ease-in-out;
+
+    @include media("tablet") {
+      transform: none !important;
+    }
     &::after,
     &:before {
       position: absolute;
