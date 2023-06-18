@@ -797,7 +797,7 @@ button {
 .timeline__item {
   background-color: transparent;
   min-height: 300px;
-  min-width: 1515px;
+  min-width: 300px;
   position: relative;
   display: flex;
   margin: 0 0 80px;
@@ -835,6 +835,11 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+@media only screen and (max-width: 767.98px) {
+  .timeline__item:nth-child(odd) .timeline__item-wrapper {
+    align-items: flex-end;
+  }
 }
 .timeline__item-wrapper {
   position: relative;
