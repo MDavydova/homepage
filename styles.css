@@ -794,6 +794,63 @@ button {
   width: 32px;
 }
 
+.timeline__item {
+  background-color: transparent;
+  min-height: 300px;
+  min-width: 1515px;
+  position: relative;
+  display: flex;
+  margin: 0 0 80px;
+  padding: 50px 0;
+}
+.timeline__item:last-child {
+  margin: 0;
+}
+.timeline__item:before {
+  bottom: 0;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
+.timeline__item:nth-child(even) {
+  color: #000000;
+}
+.timeline__item:nth-child(even):before {
+  border-radius: 0 50% 50% 0;
+  background-color: #fcf200;
+  right: 40%;
+}
+.timeline__item:nth-child(odd) {
+  color: #ffffff;
+}
+.timeline__item:nth-child(odd):before {
+  background-color: #1142c1;
+  border-radius: 50% 0 0 50%;
+  left: 24%;
+}
+.timeline__item:nth-child(odd) .timeline__item-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.timeline__item-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.timeline__item-wrapper h3 {
+  margin: 0 0 16px;
+  font-family: "Philosopher", sans-serif;
+}
+.timeline__item-wrapper p {
+  font-family: "Port Lligat Slab", serif;
+}
+
+.separator {
+  margin: 50px 0;
+}
 .separator__img {
   position: relative;
   width: -moz-fit-content;
@@ -805,7 +862,7 @@ button {
     max-width: 300px;
   }
 }
-.separator__img span {
+.separator__img h2 {
   font-family: "Philosopher", sans-serif;
   font-weight: 700;
   font-size: 43px;
@@ -815,7 +872,7 @@ button {
   bottom: 35px;
 }
 @media only screen and (max-width: 568px) {
-  .separator__img span {
+  .separator__img h2 {
     bottom: 21px;
     font-size: 32px;
   }
@@ -836,4 +893,21 @@ button {
 }
 .separator--dark .separator__box {
   background-color: #000000;
+}
+.separator--flame .separator__box {
+  width: 40%;
+  height: 47px;
+  background-color: #d9d9d9;
+}
+.separator--flame .separator__img {
+  position: relative;
+  margin-left: -70px;
+}
+.separator--flame .separator__img h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translate(-50%, -50%);
 }
