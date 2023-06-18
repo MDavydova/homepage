@@ -1,0 +1,59 @@
+$primary: #243d91;
+$primary-op-2: rgba($primary, 0.02);
+$primary-op-4: rgba($primary, 0.04);
+$primary-op-16: rgba($primary, 0.16);
+$primary-op-24: rgba($primary, 0.24);
+$primary-op-64: rgba($primary, 0.64);
+$primary-op-48: rgba($primary, 0.48);
+$primary-op-32: rgba($primary, 0.32);
+$primary-op-8: rgba($primary, 0.08);
+$primary-op-80: rgba($primary, 0.8);
+$primary-op-88: rgba($primary, 0.88);
+$primary-dark: #021f54;
+$primary-dark-op-08: rgba($primary-dark, 0.08);
+$primary-dark-op-8: rgba($primary-dark, 0.8);
+$primary-dark-op-48: rgba($primary-dark, 0.48);
+$primary-dark-op-64: rgba($primary-dark, 0.64);
+$primary-dark-op-88: rgba($primary-dark, 0.88);
+$blue: #0d58cf;
+$blue-light: #a8c6fa;
+$blue-dark: #00329a;
+$secondary: #96c23d;
+$secondary-op-8: rgba($secondary, 0.08);
+$secondary-light: #f7fbf0;
+$green-light: #a6ce2f;
+$red: #ff0000;
+$red-op-8: rgba($red, 0.08);
+$red-op-16: rgba($red, 0.16);
+$orange: #eb7400;
+$bg: #edeff6;
+$bg-secondary: #f7f6f6;
+$bg-grey: linear-gradient(0deg, rgba($primary, 0.02), rgba($primary, 0.02)),
+  white;
+$bg-grey-secondary: #ebebeb;
+$bg-grey-dark-secondary: #929292;
+$bg-grey-dark: #606060;
+$black: #000000;
+$black-op-15: rgba($black, 0.15);
+$black-op-48: rgba($black, 0.48);
+$black-op-60: rgba($black, 0.6);
+$black-op-64: rgba($black, 0.64);
+$black-op-72: rgba($black, 0.72);
+$black-op-88: rgba($black, 0.88);
+$white: #ffffff;
+$grey-dark: #444444;
+$white-op-64: rgba($white, 0.64);
+$white-op-88: rgba($white, 0.88);
+
+$container-width: 1280px;
+
+$breakpoints: (
+  "xs": 320px,
+  "small-phone": 375px,
+  "large-phone": 568px,
+  "tablet": 767.98px,
+  "large-tablet": 992px,
+  "ipad": 1024px,
+  "desktop": 1280px,
+  "large": 1440px,
+);
