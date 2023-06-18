@@ -1,0 +1,76 @@
+.separator {
+  margin: 50px 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &__img {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+
+    @include media("large-phone") {
+      max-width: 300px;
+    }
+
+    h2 {
+      font-family: "Philosopher", sans-serif;
+      font-weight: 700;
+      font-size: 43px;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 35px;
+
+      @include media("large-phone") {
+        bottom: 21px;
+        font-size: 32px;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    background-color: $beige;
+    height: 82px;
+  }
+
+  &--light {
+    color: #000000;
+  }
+
+  &--dark {
+    color: $beige-dark;
+
+    .separator__box {
+      background-color: #000000;
+    }
+  }
+
+  &--flame {
+    .separator {
+      &__box {
+        width: 40%;
+        height: 47px;
+        background-color: $beige-light;
+      }
+      &__img {
+        position: relative;
+        margin-left: -70px;
+
+        h2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          bottom: auto;
+          right: auto;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  height: 100%;
+  width: 100%;
+  color: #000000;
+  background-color: $bg;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1366px;
+  padding: 0 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 250px;
+}

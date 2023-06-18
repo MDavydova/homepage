@@ -1,0 +1,98 @@
+.intro {
+  font-family: "Port Lligat Slab", serif;
+  &__caption {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 32px;
+    position: absolute;
+    color: $secondary;
+    left: 0;
+    top: 5%;
+
+    &--desk {
+      display: block;
+
+      @include media("tablet") {
+        display: none;
+      }
+    }
+
+    &--mob {
+      display: none;
+      @include media("tablet") {
+        display: block;
+        color: black;
+        position: static;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__composition {
+    position: relative;
+    padding-top: 50px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: rgba(196, 174, 213, 0.2);
+      mix-blend-mode: hard-light;
+      filter: blur(38.875px);
+      width: 800px;
+      height: 1000px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &-block {
+      position: relative;
+      max-width: 900px;
+      margin: -215px auto 0;
+      z-index: 2;
+
+      @include media("tablet") {
+        margin: -165px auto 0;
+      }
+
+      &-box {
+        background: $beige;
+        box-shadow: 0px 32px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 13px 13px 0px 0px;
+        height: 240px;
+        width: 100%;
+
+        @include media("tablet") {
+          height: auto;
+          padding: 16px;
+        }
+
+        & + div {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &-image {
+      position: relative;
+      img {
+        width: 100%;
+      }
+
+      &--jellyfish {
+        max-width: 360px;
+        margin: 0 auto;
+        margin-top: 5px;
+        z-index: 1;
+      }
+
+      &--chair {
+        max-width: 260px;
+        margin-top: -170px;
+
+        @include media("tablet") {
+          display: none;
+        }
+      }
+    }
+  }
+}
