@@ -29,33 +29,44 @@
         background-color: $yellow;
         right: 40%;
       }
+
+      .timeline__item-wrapper {
+        max-width: 50%;
+      }
     }
 
     &:nth-child(odd) {
       color: #ffffff;
       &:before {
         background-color: $blue;
-
         border-radius: 50% 0 0 50%;
         left: 24%;
       }
 
       .timeline__item-wrapper {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        @include media("tablet") {
-          align-items: flex-end;
-        }
+        align-items: flex-start;
+        margin-left: auto;
       }
     }
 
     &-wrapper {
+      display: flex;
+      flex-direction: column;
       position: relative;
       z-index: 1;
-      h3 {
+      max-width: 60%;
+
+      > * {
         margin: 0 0 16px;
+        &:last-child {
+          margin: 0;
+        }
+        strong {
+          text-decoration: underline;
+        }
+      }
+      h3 {
+        font-size: 32px;
         font-family: "Philosopher", sans-serif;
       }
       p {

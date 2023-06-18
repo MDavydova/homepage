@@ -1,26 +1,16 @@
 $primary: #207f86;
 $primary-dark: #113337;
 $secondary: #b0f5fa;
+$secondary-dark: #1fb1bb;
 $bg: #262626;
 $beige: #c4c4c4;
 $beige-dark: #ceafaf;
 $beige-light: #d9d9d9;
 $blue: #1142c1;
+$blue-light: #1c9bf7;
 $yellow: #fcf200;
 
 $breakpoints: (
-  "xs": 320px,
-  "small-phone": 375px,
   "large-phone": 568px,
   "tablet": 767.98px,
-  "large-tablet": 992px,
-  "ipad": 1024px,
-  "desktop": 1280px,
-  "large": 1440px,
 );
-
-/*
-font-family: 'Philosopher', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Port Lligat Slab', serif;
-*/

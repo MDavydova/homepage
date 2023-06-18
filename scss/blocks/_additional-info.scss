@@ -1,0 +1,172 @@
+.skills {
+  gap: 64px 24px;
+  font-family: "Port Lligat Slab", serif;
+  &__img {
+    position: relative;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+
+    @include media("tablet") {
+      transform: none !important;
+    }
+    &::after,
+    &:before {
+      position: absolute;
+      left: 50%;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+
+      @include media("tablet") {
+        opacity: 1;
+      }
+    }
+
+    &--creative {
+      transform: rotate(30deg);
+      &::after {
+        content: "Creative";
+        color: #000000;
+        top: 35%;
+
+        transform: translateX(-50%);
+      }
+    }
+    &--express {
+      color: #ffffff;
+      &::after {
+        content: "Express";
+        top: 60%;
+
+        transform: translate(-50%, -60%);
+      }
+    }
+    &--know {
+      color: #ffffff;
+      transform: rotate(-30deg);
+      &::after {
+        content: "Curious";
+        top: 35%;
+
+        transform: translateX(-50%);
+      }
+    }
+    &--js {
+      font-family: "Philosopher", sans-serif;
+      &::after {
+        content: "JAVASCRIPT";
+        top: 48%;
+
+        transform: translateX(-50%);
+
+        @include media("tablet") {
+          top: 50%;
+        }
+      }
+    }
+    &--html {
+      font-family: "Philosopher", sans-serif;
+      &::after {
+        content: "HTML5";
+        top: 51%;
+        color: $secondary-dark;
+        transform: translateX(-50%);
+
+        @include media("tablet") {
+          top: 54%;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "CSS3";
+        top: 60%;
+        color: $blue-light;
+        transform: translateX(-50%);
+
+        @include media("tablet") {
+          top: 63%;
+        }
+      }
+    }
+
+    &--responsible {
+      transform: rotate(-30deg);
+      &::after {
+        content: "Liable";
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &--flex {
+      color: $yellow;
+      transform: rotate(30deg);
+
+      &::after {
+        content: "Flexible";
+
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+
+    &-decor {
+      height: 10px;
+      width: 100%;
+      border-radius: 65px;
+      background-color: $beige-dark;
+      min-width: 250px;
+
+      @include media("tablet") {
+        display: none;
+      }
+    }
+  }
+
+  &__box {
+    gap: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include media("tablet") {
+      gap: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-item {
+      cursor: pointer;
+
+      &:hover {
+        .skills__img {
+          transform: rotate(0);
+          &::after,
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      &--desk {
+        display: block;
+        @include media("tablet") {
+          display: none;
+        }
+      }
+      &--mob {
+        display: none;
+        @include media("tablet") {
+          display: block;
+          margin: 0 auto;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}

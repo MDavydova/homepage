@@ -1,26 +1,9 @@
-/*
-font-family: 'Philosopher', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Port Lligat Slab', serif;
-*/
 .flex {
   display: flex;
 }
 
-.inline-flex {
-  display: inline-flex;
-}
-
 .align-center {
   align-items: center;
-}
-
-.align-baseline {
-  align-items: baseline;
-}
-
-.align-end {
-  align-items: end;
 }
 
 .justify-center {
@@ -31,99 +14,8 @@ font-family: 'Port Lligat Slab', serif;
   justify-content: space-between;
 }
 
-.justify-end {
-  justify-content: flex-end;
-}
-
-@media only screen and (max-width: 767.98px) {
-  .t-justify-start {
-    justify-content: start;
-  }
-}
-
 .flex-column {
   flex-direction: column;
-}
-
-.flex-reverse {
-  flex-direction: row-reverse;
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.mb-8 {
-  margin-bottom: 8px;
-}
-
-.mb-16 {
-  margin-bottom: 16px;
-}
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
-.mb-32 {
-  margin-bottom: 32px;
-}
-
-.mb-64 {
-  margin-bottom: 64px;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
-.relative {
-  position: relative;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.mb-16 {
-  margin-bottom: 16px;
-}
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media only screen and (max-width: 767.98px) {
-  .t-mb-32 {
-    margin-bottom: 32px;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .t-mb-24 {
-    margin-bottom: 24px !important;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .t-mb-16 {
-    margin-bottom: 16px !important;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .m-mb-0 {
-    margin-bottom: 0;
-  }
 }
 
 .relative {
@@ -136,44 +28,6 @@ font-family: 'Port Lligat Slab', serif;
   }
 }
 
-@media only screen and (max-width: 767.98px) {
-  .t-flex-row {
-    flex-direction: row;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .t-align-center {
-    align-items: center;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .d-flex-col {
-    flex-direction: column;
-  }
-}
-
-.dropdown-body {
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-/*
-font-family: 'Philosopher', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Port Lligat Slab', serif;
-*/
 body {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -194,6 +48,10 @@ body {
   padding: 0 24px;
   width: 100%;
   margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 250px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -560,8 +418,6 @@ button {
   height: 100%;
 }
 .header h1 {
-  color: #207f86;
-  font-size: 64px;
   font-family: "Port Lligat Slab", serif;
 }
 @media only screen and (max-width: 767.98px) {
@@ -578,6 +434,7 @@ button {
   background-color: #113337;
   padding: 30px 50px;
   border-radius: 16px;
+  z-index: 1000;
 }
 @media only screen and (max-width: 767.98px) {
   .header__nav {
@@ -595,9 +452,15 @@ button {
 }
 .header__nav nav ul a,
 .header__nav nav ul a:visited {
+  border-bottom: 1px solid transparent;
   color: #000000;
   font-weight: 300;
   font-size: 32px;
+  transition: all 0.3s ease-in-out;
+}
+.header__nav nav ul a:hover,
+.header__nav nav ul a:visited:hover {
+  border-color: currentColor;
 }
 @media only screen and (max-width: 767.98px) {
   .header__nav nav ul a,
@@ -627,11 +490,6 @@ button {
   content: url("/assets/right-wing.svg");
   right: 0;
 }
-@media only screen and (max-width: 767.98px) {
-  .header__nav-headline::after {
-    display: none;
-  }
-}
 .header__nav-headline::before {
   position: absolute;
   content: url("/assets/left-wing.svg");
@@ -644,13 +502,13 @@ button {
 }
 .header__nav-headline-box {
   max-width: 500px;
-  margin: 0 auto 50px;
+  margin: 0 auto 32px;
   position: relative;
 }
 @media only screen and (max-width: 767.98px) {
   .header__nav-headline-box {
-    margin: 0 auto 24px;
-    position: static;
+    margin: 0 auto 34px;
+    display: none;
     max-width: 100%;
   }
 }
@@ -823,6 +681,9 @@ button {
   background-color: #fcf200;
   right: 40%;
 }
+.timeline__item:nth-child(even) .timeline__item-wrapper {
+  max-width: 50%;
+}
 .timeline__item:nth-child(odd) {
   color: #ffffff;
 }
@@ -832,29 +693,206 @@ button {
   left: 24%;
 }
 .timeline__item:nth-child(odd) .timeline__item-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-@media only screen and (max-width: 767.98px) {
-  .timeline__item:nth-child(odd) .timeline__item-wrapper {
-    align-items: flex-end;
-  }
+  align-items: flex-start;
+  margin-left: auto;
 }
 .timeline__item-wrapper {
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1;
+  max-width: 60%;
+}
+.timeline__item-wrapper > * {
+  margin: 0 0 16px;
+}
+.timeline__item-wrapper > *:last-child {
+  margin: 0;
+}
+.timeline__item-wrapper > * strong {
+  text-decoration: underline;
 }
 .timeline__item-wrapper h3 {
-  margin: 0 0 16px;
+  font-size: 32px;
   font-family: "Philosopher", sans-serif;
 }
 .timeline__item-wrapper p {
   font-family: "Port Lligat Slab", serif;
 }
 
+.skills {
+  gap: 64px 24px;
+  font-family: "Port Lligat Slab", serif;
+}
+.skills__img {
+  position: relative;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__img {
+    transform: none !important;
+  }
+}
+.skills__img::after, .skills__img:before {
+  position: absolute;
+  left: 50%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__img::after, .skills__img:before {
+    opacity: 1;
+  }
+}
+.skills__img--creative {
+  transform: rotate(30deg);
+}
+.skills__img--creative::after {
+  content: "Creative";
+  color: #000000;
+  top: 35%;
+  transform: translateX(-50%);
+}
+.skills__img--express {
+  color: #ffffff;
+}
+.skills__img--express::after {
+  content: "Express";
+  top: 60%;
+  transform: translate(-50%, -60%);
+}
+.skills__img--know {
+  color: #ffffff;
+  transform: rotate(-30deg);
+}
+.skills__img--know::after {
+  content: "Curious";
+  top: 35%;
+  transform: translateX(-50%);
+}
+.skills__img--js {
+  font-family: "Philosopher", sans-serif;
+}
+.skills__img--js::after {
+  content: "JAVASCRIPT";
+  top: 48%;
+  transform: translateX(-50%);
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__img--js::after {
+    top: 50%;
+  }
+}
+.skills__img--html {
+  font-family: "Philosopher", sans-serif;
+}
+.skills__img--html::after {
+  content: "HTML5";
+  top: 51%;
+  color: #1fb1bb;
+  transform: translateX(-50%);
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__img--html::after {
+    top: 54%;
+  }
+}
+.skills__img--html::before {
+  position: absolute;
+  content: "CSS3";
+  top: 60%;
+  color: #1c9bf7;
+  transform: translateX(-50%);
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__img--html::before {
+    top: 63%;
+  }
+}
+.skills__img--responsible {
+  transform: rotate(-30deg);
+}
+.skills__img--responsible::after {
+  content: "Liable";
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills__img--flex {
+  color: #fcf200;
+  transform: rotate(30deg);
+}
+.skills__img--flex::after {
+  content: "Flexible";
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills__img img {
+  margin: 0 auto;
+  display: block;
+}
+.skills__img-decor {
+  height: 10px;
+  width: 100%;
+  border-radius: 65px;
+  background-color: #ceafaf;
+  min-width: 250px;
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__img-decor {
+    display: none;
+  }
+}
+.skills__box {
+  gap: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__box {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.skills__box-item {
+  cursor: pointer;
+}
+.skills__box-item:hover .skills__img {
+  transform: rotate(0);
+}
+.skills__box-item:hover .skills__img::after, .skills__box-item:hover .skills__img::before {
+  opacity: 1;
+}
+.skills__box-item--desk {
+  display: block;
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__box-item--desk {
+    display: none;
+  }
+}
+.skills__box-item--mob {
+  display: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .skills__box-item--mob {
+    display: block;
+    margin: 0 auto;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
 .separator {
   margin: 50px 0;
+}
+.separator:first-of-type {
+  margin-top: 0;
 }
 .separator__img {
   position: relative;
