@@ -7,12 +7,12 @@ const concat = require("gulp-concat");
 
 gulp.task("styles", () => {
   return gulp
-    .src("styles/scss/**/*.scss")
+    .src("scss/**/*.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(concat("all.scss"))
+    .pipe(concat("styles.scss"))
     .pipe(autoprefixer())
     .pipe(rename("styles.css"))
-    .pipe(gulp.dest("styles.css"));
+    .pipe(gulp.dest("./"));
 });
 
 gulp.task("clean", (done) => {
@@ -21,7 +21,7 @@ gulp.task("clean", (done) => {
 });
 
 gulp.task("watch", () => {
-  gulp.watch("styles/scss", (done) => {
+  gulp.watch("scss", (done) => {
     gulp.series(["clean", "styles"])(done);
   });
 });
