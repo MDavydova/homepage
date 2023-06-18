@@ -1,0 +1,53 @@
+.contact {
+  padding-top: 50px;
+  p {
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Philosopher", sans-serif;
+    margin: 0 0 64px;
+
+    @include media("tablet") {
+      margin: 0 0 32px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    position: relative;
+
+    &--parrot {
+    }
+
+    &--chair {
+      max-width: 260px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__socials {
+    z-index: 2;
+
+    #contactDisplay {
+      margin: 32px 0;
+      cursor: pointer;
+    }
+
+    &-item {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    img {
+      width: 32px;
+    }
+  }
+}

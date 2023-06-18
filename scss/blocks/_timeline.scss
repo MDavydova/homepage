@@ -1,0 +1,66 @@
+.timeline {
+  &__item {
+    background-color: transparent;
+    min-height: 300px;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    margin: 0 0 80px;
+    padding: 50px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:before {
+      bottom: 0;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      z-index: 0;
+    }
+
+    &:nth-child(even) {
+      color: #000000;
+      &:before {
+        border-radius: 0 50% 50% 0;
+        background-color: $yellow;
+        right: 40%;
+      }
+    }
+
+    &:nth-child(odd) {
+      color: #ffffff;
+      &:before {
+        background-color: $blue;
+
+        border-radius: 50% 0 0 50%;
+        left: 24%;
+      }
+
+      .timeline__item-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include media("tablet") {
+          align-items: flex-end;
+        }
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+      z-index: 1;
+      h3 {
+        margin: 0 0 16px;
+        font-family: "Philosopher", sans-serif;
+      }
+      p {
+        font-family: "Port Lligat Slab", serif;
+      }
+    }
+  }
+}
