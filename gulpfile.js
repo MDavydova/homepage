@@ -12,11 +12,11 @@ gulp.task("styles", () => {
     .pipe(concat("all.scss"))
     .pipe(autoprefixer())
     .pipe(rename("styles.css"))
-    .pipe(gulp.dest("styles/css"));
+    .pipe(gulp.dest("styles.css"));
 });
 
 gulp.task("clean", (done) => {
-  del(["styles/css/styles.css"]);
+  del(["styles.css"]);
   done();
 });
 
