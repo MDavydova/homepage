@@ -696,7 +696,7 @@ button {
   mix-blend-mode: hard-light;
   filter: blur(38.875px);
   width: 800px;
-  height: 1300px;
+  height: 1000px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -748,6 +748,50 @@ button {
   .intro__composition-image--chair {
     display: none;
   }
+}
+
+.contact {
+  padding-top: 50px;
+}
+.contact p {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Philosopher", sans-serif;
+  margin: 0 0 64px;
+}
+@media only screen and (max-width: 767.98px) {
+  .contact p {
+    margin: 0 0 32px;
+  }
+}
+.contact__image {
+  margin: 0 auto;
+  position: relative;
+}
+.contact__image--chair {
+  max-width: 260px;
+}
+.contact__image img {
+  width: 100%;
+}
+.contact__socials {
+  z-index: 2;
+}
+.contact__socials #contactDisplay {
+  margin: 32px 0;
+  cursor: pointer;
+}
+.contact__socials-item {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+.contact__socials-item:hover {
+  opacity: 0.7;
+}
+.contact__socials img {
+  width: 32px;
 }
 
 .separator__img {
